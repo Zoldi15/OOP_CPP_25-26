@@ -93,7 +93,8 @@ void SettlementStatisticsImp::readFromFile(const string& filename){
         stringstream ss1(popstr);
         ss1 >> population;
 
+        Settlement s(name, county, population);
 
-        this->Settlements.insert(county, {"","",0});
+        this->Settlements.insert({county, s});
     }
 }
