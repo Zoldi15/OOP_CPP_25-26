@@ -17,12 +17,12 @@ class Settlement {
 
 public:
 
-    Settlement(string name, string county, int population);
-    Settlement(Settlement& s);
+    Settlement(string name, string county, int population):name(name),county(county),population(population){}
+    Settlement(const Settlement& s):name(s.getName()),county(s.getCounty()),population(s.getPopulation()){}
 
-    string getName(){return name;}
-    string getCounty(){return county;}
-    int getPopulation(){return population;}
+    string getName() const {return name;}
+    string getCounty() const {return county;}
+    int getPopulation() const {return population;}
 
     void setName(string name){this->name=move(name);}
     void setCounty(string county){this->county=move(county);}

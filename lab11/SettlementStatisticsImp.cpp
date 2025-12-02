@@ -68,7 +68,7 @@ Settlement SettlementStatisticsImp::minPopulationBySettlement(){
     return found;
 }
 
-vector<Settlement> SettlementStatisticsImp::findSettlementsByName(const string& name) override {
+vector<Settlement> SettlementStatisticsImp::findSettlementsByName(const string& name) {
     vector<Settlement> found;
     for (auto& s : Settlements) {
         if (s.second.getName()==name) found.push_back(s.second);
